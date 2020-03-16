@@ -1,23 +1,34 @@
 // JavaScript File
-// function to change background
-function changeBackground() {
+// let statement
+let myNumber;
+// function to background colour
+function newBackground() {
   document.getElementById("body").style.backgroundColor="lightgreen";
 }
-// function to make text appear
-function newHeader() {
-  document.getElementById("h1").innerHTML="Website Header";
+// message function
+function newMessage() {
+  document.getElementById("h1").innerHTML="Favourite Number Survey";
 }
-function addBorder() {
-  document.getElementById("body").style.borderStyle="solid";
+// textbox visibility function
+function newTextbox() {
+  document.getElementById("myform").style.display="block";
 }
-function logNumbers() {
-  console.log(2+2);
-}    
-// triggers the background change on mouse movement
-window.addEventListener("mouseover", changeBackground);
-// when mouse moves, a header appears
-window.addEventListener("mouseout", newHeader);
-// when button is clicked, a border is added to the body
-window.addEventListener("click", addBorder);
-// when button is clicked, console logs 2+2, making it display 4
-window.addEventListener("click", logNumbers);
+// button visibility function
+function newButton() {
+  document.getElementById("mybutton").style.display="block";
+}
+//alert function that finds inputted number and forms a sentence with it
+function newAlert() {
+  myNumber=document.getElementById("number").value;
+  alert(myNumber + " is also my favourite number!");
+}
+//changes background colour
+window.addEventListener("mouseover", newBackground);
+//adds message
+window.addEventListener("mouseover", newMessage);
+//makes textbox appear
+window.addEventListener("mouseover", newTextbox);
+//makes button appear
+window.getElementById("div").addEventListener("click", newButton);
+//makes button send alert
+window.getElementById("mybutton").addEventListener("click", newAlert);
