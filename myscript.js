@@ -2,33 +2,33 @@
 // let statement
 let myNumber;
 // function to background colour
-function newBackground() {
+function myBackground() {
   document.getElementById("body").style.backgroundColor="lightgreen";
 }
 // message function
-function newMessage() {
+function myMessage() {
   document.getElementById("h1").innerHTML="Favourite Number Survey";
 }
 // textbox visibility function
-function newTextbox() {
+function myTextbox() {
   document.getElementById("myform").style.display="block";
 }
 // button visibility function
-function newButton() {
-  document.getElementById("mybutton").style.display="block";
+function myButton() {
+  document.getElementById("button1").style.display="block";
 }
 //alert function that finds inputted number and forms a sentence with it
-function newAlert() {
-  myNumber=document.getElementById("number").value;
+function myAlert() {
+  myNumber=document.getElementById("numberinput").value;
   alert(myNumber + " is also my favourite number!");
 }
 //changes background colour
-window.addEventListener("mouseover", newBackground);
+window.addEventListener("load", myBackground);
 //adds message
-window.addEventListener("mouseover", newMessage);
+window.addEventListener("load", myMessage);
 //makes textbox appear
-window.addEventListener("mouseover", newTextbox);
+window.addEventListener("mouseover", myTextbox);
 //makes button appear
-window.getElementById("div").addEventListener("click", newButton);
+window.addEventListener("mouseover", myButton);
 //makes button send alert
-window.getElementById("mybutton").addEventListener("click", newAlert);
+document.getElementById("button1").addEventListener("click", myAlert);
